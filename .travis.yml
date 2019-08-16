@@ -1,7 +1,7 @@
-language:shell
+language:nodejs
 
 before_script:
-  - echo "before script"
+  - npm install
  
  script:
-   - echo "script"
+   - npm test

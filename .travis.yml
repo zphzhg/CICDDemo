@@ -1,7 +1,7 @@
 language:nodejs
 
-before_script:
-  - npm install
+services:
+  - docker 
  
- script:
-   - npm test
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin

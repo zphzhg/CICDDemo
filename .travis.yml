@@ -1,0 +1,7 @@
+language:shell
+
+before_script:
+  - echo "before script"
+ 
+ script:
+   - echo "script"

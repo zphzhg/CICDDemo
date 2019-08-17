@@ -1,7 +1,14 @@
-language:python
+language: node_js
+# nodejs版本
+node_js: 
+    - '6'
 
-services:
-  - docker 
- 
-script:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+
+# S: Build Lifecycle
+install:
+  - npm install
